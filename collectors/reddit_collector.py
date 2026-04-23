@@ -3,9 +3,13 @@ from datetime import datetime, timedelta
 
 # PMF 시그널이 강한 서브레딧 + 검색 키워드
 SUBREDDITS = [
+    # 일반 창업/비즈니스
     "entrepreneur", "SaaS", "smallbusiness", "freelance",
     "startups", "productivity", "solopreneur",
-    "digitalnomad", "webdev", "marketing"
+    "digitalnomad", "webdev", "marketing",
+    # 금융/핀테크 (우선순위 도메인)
+    "fintech", "personalfinance", "investing", "financialindependence",
+    "CryptoCurrency", "algotrading", "wallstreetbets", "FinancialCareers"
 ]
 
 PAIN_KEYWORDS = [

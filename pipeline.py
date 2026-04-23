@@ -6,17 +6,19 @@ PMF 점수화와 Notion 저장은 이 스크립트를 실행하는 Claude 에이
 
 import json
 import sys
-from collectors import reddit_collector, hn_collector
+from collectors import reddit_collector, hn_collector, korean_collector
 
 
 def run():
     reddit_items = reddit_collector.collect(limit_per_sub=30)
     hn_items = hn_collector.collect(hours_back=24)
-    all_items = reddit_items + hn_items
+    kr_items = korean_collector.collect(hours_back=24)
+    all_items = reddit_items + hn_items + kr_items
 
     output = {
         "reddit_count": len(reddit_items),
         "hn_count": len(hn_items),
+        "korean_count": len(kr_items),
         "total": len(all_items),
         "items": all_items,
     }
